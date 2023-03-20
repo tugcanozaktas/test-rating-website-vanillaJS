@@ -67,3 +67,35 @@ function alertBox(){
     let alertText = "Your point to my website is: " + percentage.toPrecision(3) + "%" + "  Thanks buddy :D"
     alert(alertText)
 }
+
+let menuButton = document.getElementById("menu-open");
+menuButton.addEventListener("click", openMenu, false);
+let menuWrapper = document.getElementById("menu-wrapper");
+
+
+function openMenu(){
+    if(menuButton.innerHTML == "menu"){
+
+        menuButton.innerHTML = "close";
+        menuButton.style.marginRight = "250px"
+
+        menuWrapper.style.position = "fixed"
+        menuWrapper.style.display = "block";
+        menuWrapper.style.width = "300px";
+        menuWrapper.style.height = "100vh";
+    }
+    else if(menuButton.innerHTML == "close"){
+
+        menuButton.innerHTML = "menu";
+        menuButton.style.marginRight = "0px"
+
+        
+    }
+    
+}
+
+
+
+
+
+
